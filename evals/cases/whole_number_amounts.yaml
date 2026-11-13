@@ -1,0 +1,9 @@
+name: a statement that prints whole-number amounts (no decimals) still yields its lines
+mailbox: evals/mailboxes/whole_number_amounts
+as_of: "2032-05-31"
+mode: supervised
+expect:
+  key: {invoice_id: "TX-ST-203204", class: waived_but_billed}
+  verdict: finding
+  amount_usd: "360.00"
+why: the April account fee is waived by the Schedule 1 waivers person; the line reads "1 month | 360 | 360"

@@ -1,0 +1,141 @@
+{
+ "harness": "harness/harness.py",
+ "passed": 22,
+ "total": 22,
+ "your_cases": 20,
+ "score": 1.0,
+ "cases": [
+  {
+   "case": "backdated_amendment.yaml",
+   "name": "a backdated amendment in batch 2 revises a batch 1 invoice",
+   "pass": true,
+   "diff": []
+  },
+  {
+   "case": "band_edge_clean.yaml",
+   "name": "a weight exactly on the band edge (44.5 kg) is priced at that band - clean",
+   "pass": true,
+   "diff": []
+  },
+  {
+   "case": "big_overcharge_autonomous.yaml",
+   "name": "an overcharge of USD 5,000 or more waits for a person even in autonomous mode",
+   "pass": true,
+   "diff": []
+  },
+  {
+   "case": "expiry_extended.yaml",
+   "name": "a signed extension moves the end date out of the 60-day window",
+   "pass": true,
+   "diff": []
+  },
+  {
+   "case": "feedback_reject.yaml",
+   "name": "a person's reject removes that key",
+   "pass": true,
+   "diff": []
+  },
+  {
+   "case": "hawb_split_clean.yaml",
+   "name": "two house AWBs of one master on two invoices are a split shipment, not a duplicate",
+   "pass": true,
+   "diff": []
+  },
+  {
+   "case": "injection_ignored.yaml",
+   "name": "text addressed to the AI auditor is data, even from an authorised address",
+   "pass": true,
+   "diff": []
+  },
+  {
+   "case": "inr_missing_fx.yaml",
+   "name": "an INR invoice dated after the last Annex F row cannot be converted",
+   "pass": true,
+   "diff": []
+  },
+  {
+   "case": "late_risk_day14.yaml",
+   "name": "an open invoice due in exactly 14 days is a late-fee risk",
+   "pass": true,
+   "diff": []
+  },
+  {
+   "case": "late_risk_day15.yaml",
+   "name": "an open invoice due in 15 days is outside the window",
+   "pass": true,
+   "diff": []
+  },
+  {
+   "case": "new_layout_overcharge.yaml",
+   "name": "unseen invoice layout (amount first, \"@\", text dates, \"Tax Invoice No:\") still prices the lines",
+   "pass": true,
+   "diff": []
+  },
+  {
+   "case": "rebill_part_credited.yaml",
+   "name": "a charge billed again under another label, partly credited - overlap minus credit",
+   "pass": true,
+   "diff": []
+  },
+  {
+   "case": "resend_for_records.yaml",
+   "name": "the same invoice sent again as a copy for your records is not a duplicate",
+   "pass": true,
+   "diff": []
+  },
+  {
+   "case": "resend_reminder_paid.yaml",
+   "name": "a payment reminder for an invoice the ledger shows paid is a duplicate (other wording)",
+   "pass": true,
+   "diff": []
+  },
+  {
+   "case": "sample_conflict.yaml",
+   "name": "amendment and rate notice disagree",
+   "pass": true,
+   "diff": []
+  },
+  {
+   "case": "sample_overcharge.yaml",
+   "name": "wrong rate on one freight line",
+   "pass": true,
+   "diff": []
+  },
+  {
+   "case": "storage_overbilled.yaml",
+   "name": "storage billed for more days than the tracking record allows",
+   "pass": true,
+   "diff": []
+  },
+  {
+   "case": "waiver_by_month.yaml",
+   "name": "a waiver by month (not by AWB) on a monthly statement, label printed differently",
+   "pass": true,
+   "diff": []
+  },
+  {
+   "case": "waiver_quoted_only.yaml",
+   "name": "a waiver seen only quoted inside a colleague's forward needs the original",
+   "pass": true,
+   "diff": []
+  },
+  {
+   "case": "waiver_unauthorised.yaml",
+   "name": "a waiver from someone missing from Schedule 1 is not a waiver",
+   "pass": true,
+   "diff": []
+  },
+  {
+   "case": "weight_above_awb.yaml",
+   "name": "billed weight above the AWB chargeable weight reprices freight, fuel and security",
+   "pass": true,
+   "diff": []
+  },
+  {
+   "case": "whole_number_amounts.yaml",
+   "name": "a statement that prints whole-number amounts (no decimals) still yields its lines",
+   "pass": true,
+   "diff": []
+  }
+ ]
+}

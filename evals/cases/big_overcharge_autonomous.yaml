@@ -1,0 +1,10 @@
+name: an overcharge of USD 5,000 or more waits for a person even in autonomous mode
+mailbox: evals/mailboxes/big_overcharge_autonomous
+as_of: "2032-03-31"
+mode: autonomous
+expect:
+  key: {invoice_id: "TX-US-2032-9013", class: overcharge}
+  verdict: finding
+  amount_usd: "7816.41"
+  action: human_review
+why: 300+ band is 5.29; 0.70 x 9000 = 6300.00 plus fuel 1516.41; over the unattended threshold

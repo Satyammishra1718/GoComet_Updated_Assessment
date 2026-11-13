@@ -1,0 +1,11 @@
+name: an open invoice due in exactly 14 days is a late-fee risk
+mailbox: evals/mailboxes/late_risk_day14
+as_of: "2032-03-01"
+mode: supervised
+expect:
+  key: {invoice_id: "TX-US-2032-9008", class: late_fee_risk}
+  verdict: finding
+  amount_usd: "13.31"
+  deadline: "2032-03-15"
+  action: internal:payment_reminder
+why: 0 < due - as_of = 14 <= 14; one month at 1.19% of 1118.49 = 13.31

@@ -1,0 +1,9 @@
+name: billed weight above the AWB chargeable weight reprices freight, fuel and security
+mailbox: evals/mailboxes/weight_above_awb
+as_of: "2032-03-31"
+mode: supervised
+expect:
+  key: {invoice_id: "TX-US-2032-9012", class: overcharge}
+  verdict: finding
+  amount_usd: "76.07"
+why: AWB 150 kg; freight 961.60-901.50 = 60.10, fuel 231.46-216.99 = 14.47, security 24.00-22.50 = 1.50

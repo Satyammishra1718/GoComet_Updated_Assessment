@@ -1,0 +1,9 @@
+name: a person's reject removes that key
+mailbox: evals/mailboxes/feedback_reject
+as_of: "2032-03-05"
+mode: supervised
+feedback: {batch_01: evals/feedback/reject_duplicate.json}
+expect:
+  key: {invoice_id: "TX-US-2032-9010", class: duplicate}
+  verdict: no_finding
+why: decision reject on that key

@@ -1,0 +1,8 @@
+name: a weight exactly on the band edge (44.5 kg) is priced at that band - clean
+mailbox: evals/mailboxes/band_edge_clean
+as_of: "2032-03-31"
+mode: supervised
+expect:
+  key: {invoice_id: "TX-US-2032-9002", class: overcharge}
+  verdict: no_finding
+why: band 0-44.5 contains 44.5; 44.5 x 7.73 = 343.99 is the contract amount

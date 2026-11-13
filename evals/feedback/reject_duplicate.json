@@ -1,0 +1,40 @@
+{
+ "schema_version": "1.0",
+ "world": "EV",
+ "after_batch": "batch_01",
+ "decided_at": "2032-03-02T10:00:00Z",
+ "decided_by": {
+  "name": "Eval Person",
+  "role": "AP Manager",
+  "entity": "QMP-US"
+ },
+ "items": [
+  {
+   "item_id": "ev-01",
+   "finding_key": {
+    "invoice_id": "TX-US-2032-9010",
+    "class": "duplicate"
+   },
+   "solicited": true,
+   "decision": "reject",
+   "fact": {
+    "type": "dispute_closed",
+    "subject": {
+     "invoice_id": "TX-US-2032-9010"
+    },
+    "value": {
+     "status": "rejected"
+    },
+    "evidence": "Second payment was refunded"
+   },
+   "scope": {
+    "kind": "one_off",
+    "applies_to": {
+     "invoice_id": "TX-US-2032-9010"
+    },
+    "valid_from": "2032-03-02",
+    "valid_to": null
+   }
+  }
+ ]
+}

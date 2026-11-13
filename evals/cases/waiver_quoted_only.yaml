@@ -1,0 +1,10 @@
+name: a waiver seen only quoted inside a colleague's forward needs the original
+mailbox: evals/mailboxes/waiver_quoted_only
+as_of: "2032-03-31"
+mode: supervised
+expect:
+  key: {invoice_id: "TX-US-2032-9003", class: waived_but_billed}
+  verdict: cannot_determine
+  action: draft:request_document
+  missing_doc: "original waiver email"
+why: quoted text has no authority on its own; ask the carrier for the original

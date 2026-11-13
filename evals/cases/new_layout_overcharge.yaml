@@ -1,0 +1,10 @@
+name: unseen invoice layout (amount first, "@", text dates, "Tax Invoice No:") still prices the lines
+mailbox: evals/mailboxes/new_layout_overcharge
+as_of: "2032-03-31"
+mode: supervised
+expect:
+  key: {invoice_id: "QX/2032/77", class: overcharge}
+  verdict: finding
+  amount_usd: "72.58"
+  action: draft:dispute
+why: Annex A USE2-INE2 100-299.5 P1 is 6.01 not 6.40; (6.40-6.01)x150 = 58.50, fuel 24.07% 231.07-216.99 = 14.08

@@ -1,0 +1,8 @@
+name: a waiver from someone missing from Schedule 1 is not a waiver
+mailbox: evals/mailboxes/waiver_unauthorised
+as_of: "2032-03-31"
+mode: supervised
+expect:
+  key: {invoice_id: "TX-US-2032-9003", class: waived_but_billed}
+  verdict: no_finding
+why: clause 11.1, only the Schedule 1 waivers person (Niall Underhill) can waive

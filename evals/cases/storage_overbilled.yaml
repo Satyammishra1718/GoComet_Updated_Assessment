@@ -1,0 +1,9 @@
+name: storage billed for more days than the tracking record allows
+mailbox: evals/mailboxes/storage_overbilled
+as_of: "2032-03-31"
+mode: supervised
+expect:
+  key: {invoice_id: "TX-US-2032-9011", class: overcharge}
+  verdict: finding
+  amount_usd: "71.61"
+why: arrived 2032-02-12, delivered 2032-02-17, 2 free days -> 3 days x 23.87 = 71.61, billed 6 days 143.22

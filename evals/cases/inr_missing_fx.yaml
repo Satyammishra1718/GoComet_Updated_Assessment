@@ -1,0 +1,10 @@
+name: an INR invoice dated after the last Annex F row cannot be converted
+mailbox: evals/mailboxes/inr_missing_fx
+as_of: "2036-02-28"
+mode: supervised
+expect:
+  key: {invoice_id: "TXI/35-36/0999", class: overcharge}
+  verdict: cannot_determine
+  action: draft:request_document
+  missing_doc: "Annex F update"
+why: Annex F stops at 2036-01; rows after it are issued by Treasury as an Annex F update

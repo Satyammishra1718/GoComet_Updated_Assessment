@@ -1,0 +1,8 @@
+name: an open invoice due in 15 days is outside the window
+mailbox: evals/mailboxes/late_risk_day15
+as_of: "2032-03-01"
+mode: supervised
+expect:
+  key: {invoice_id: "TX-US-2032-9008", class: late_fee_risk}
+  verdict: no_finding
+why: due - as_of = 15 > 14

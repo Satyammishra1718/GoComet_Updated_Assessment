@@ -1,0 +1,9 @@
+name: a charge billed again under another label, partly credited - overlap minus credit
+mailbox: evals/mailboxes/rebill_part_credited
+as_of: "2032-03-31"
+mode: supervised
+expect:
+  key: {invoice_id: "TX-US-2032-9020", class: duplicate}
+  verdict: finding
+  amount_usd: "61.81"
+why: Delivery fee 121.81 billed again as Door delivery (Annex E DLV); credit note 60.00 -> 61.81

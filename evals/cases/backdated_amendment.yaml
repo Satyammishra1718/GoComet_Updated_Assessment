@@ -1,0 +1,10 @@
+name: a backdated amendment in batch 2 revises a batch 1 invoice
+mailbox: evals/mailboxes/backdated_amendment
+as_of: "2032-04-30"
+mode: supervised
+expect:
+  key: {invoice_id: "TX-US-2032-9003", class: overcharge}
+  verdict: finding
+  amount_usd: "94.91"
+  action: draft:dispute
+why: AMD-1 effective 2032-01-01 sets 5.50; (6.01-5.50)x150 = 76.50, fuel 216.99-198.58 = 18.41

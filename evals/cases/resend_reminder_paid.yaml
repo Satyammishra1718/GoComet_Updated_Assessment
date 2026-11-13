@@ -1,0 +1,10 @@
+name: a payment reminder for an invoice the ledger shows paid is a duplicate (other wording)
+mailbox: evals/mailboxes/resend_reminder_paid
+as_of: "2032-03-01"
+mode: autonomous
+expect:
+  key: {invoice_id: "TX-US-2032-9010", class: duplicate}
+  verdict: finding
+  amount_usd: "1118.49"
+  action: execute:dispute
+why: paid 2032-02-12, asked again on 2032-02-20 ("kindly remit"); amount is the invoice total

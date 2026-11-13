@@ -1,0 +1,8 @@
+name: the same invoice sent again as a copy for your records is not a duplicate
+mailbox: evals/mailboxes/resend_for_records
+as_of: "2032-03-01"
+mode: supervised
+expect:
+  key: {invoice_id: "TX-US-2032-9010", class: duplicate}
+  verdict: no_finding
+why: the resend does not ask for payment again

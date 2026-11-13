@@ -1,0 +1,8 @@
+name: two house AWBs of one master on two invoices are a split shipment, not a duplicate
+mailbox: evals/mailboxes/hawb_split_clean
+as_of: "2032-03-31"
+mode: supervised
+expect:
+  key: {invoice_id: "TX-US-2032-9018", class: duplicate}
+  verdict: no_finding
+why: different house AWBs (-H1, -H2)

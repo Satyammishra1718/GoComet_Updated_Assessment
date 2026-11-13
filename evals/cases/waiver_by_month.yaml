@@ -1,0 +1,10 @@
+name: a waiver by month (not by AWB) on a monthly statement, label printed differently
+mailbox: evals/mailboxes/waiver_by_month
+as_of: "2032-04-30"
+mode: supervised
+expect:
+  key: {invoice_id: "TX-ST-203203", class: waived_but_billed}
+  verdict: finding
+  amount_usd: "359.64"
+  action: draft:dispute
+why: Schedule 1 waivers person waives the Monthly account fee for March 2032; Annex E maps "Account maintenance" to ACCT
